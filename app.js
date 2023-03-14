@@ -2,33 +2,39 @@ let form = document.getElementById('form');
 let tasks = [];
 showSavedTasks();
 
-form.addEventListener('add-task', function(e) {
-    e.defaultPrevented();
-    let userTaskInput = document.getElementById('user-task-input').value;
+form.addEventListener('submit', (e) => {
 
-    if (userTaskInput === ""){
-       alert("Enter a valid task.");
+    e.preventDefault();
+    
+    let userTaskInput = document.getElementById('userTaskInput').value;
+
+    if(userTaskInput === '') {
+        alert('Not a valid entry.')
+        
     } else {
-    //Displays tasks
-    showTasks(userTaskInput);
-    //Save task to local storage
-    saveTasks(userTaskInput);
-    document.getElementById('user-task-input').value = '';
+        //display items
+        showTasks(userTaskInput)
+        //save userTaskInput into local storage
+        saveTasks(userTaskInput)
+        document.getElementById('userTaskInput').value;
     }
+     
+
 });
 
-//function to store items in local storage
+//store tasks in local storage
  function saveTasks(task){
+    //push task into task array
     tasks.push(task);
-    localStorage.setItem('task', JSON.stringify(tasks));
+    localStorage.setItem('task', JSON.Stringify(tasks));
 }
 
 //Display items in DOM
-function showTasks(userTaskInput){
-    //creates an li tag for the element
+function showTasks(a){
+    //li tag for the element
     let addedTask = document.createElement('li');
 
-    addedTask.innerHTML = `${userTaskInput} <div class="delete-item">Delete Task</div>`;
+    addedTask.innerHTML = `${a}<div class="delete-item">Delete Task</div>`;
     //Display task
     let taskList = document.querySelector("ul");
     taskList.appendChild(addedTask);
@@ -41,10 +47,11 @@ function showSavedTasks(){
         tasks = [];
     } else {
         let checkLocalStorage = JSON.parse(savedTasks);
-        checkLocalStorage.forEach(function(taskInStorage){
+        checkLocalStorage.forEach((taskInStorage) => {
             showTasks(taskInStorage)
         });
     };
 };
 
-//Need logic to fix no task saving and add functionality to delete task(s).
+//Worked around tasks not adding and showing
+//Need logic to add functionality to delete task(s).

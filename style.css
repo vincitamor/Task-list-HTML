@@ -1,13 +1,13 @@
 
 form{
     width: 70%;
-    height: 550px;
-    margin: 90px auto;
+    height: 500px;
+    margin: 70px auto;
     padding: 100px;
     box-sizing: border-box; 
     position: relative;
     color: lightcyan;
-    background-color: darkgreen;
+    background-color: rgb(26, 28, 26);
 }
 
 h1{
@@ -15,27 +15,33 @@ h1{
     font-size: 40px;
 }
 
-form input#user-task-input{
+form input#userTaskInput{
     box-sizing: border-box;
-    width: 80%;
+    width: 90%;
     height: 30px;
     padding-left: 25px;
     border-style: ridge;
 }
 
 body{
-    background-color: darkred;
+    background-color: rgb(31, 17, 17);
 }
 
-#add-task{
+input{
     height: 30px;
     width: 20%;
-    background-color: red;
+    background-color:rgb(46, 44, 44);
     color: white;
     border-style: ridge;
 }
 #add-task:hover{
-    background-color: salmon;
+    background-color: white;
+}
+
+#add-task {
+height: 30px;
+color: red;
+background-color: rgb(64, 59, 70);
 }
 
 ul {
@@ -50,15 +56,15 @@ li{
     padding-bottom: 10px;
 }
 .delete-item:hover{
-    background-color: rosybrown;
+    background-color: white;
     width: 150px;
 }
 
 .delete-item{
-    background-color: blueviolet;
+    background-color: rgb(64, 59, 70);
     border-radius: 10px;
     border:none;
-    color: white;
+    color: red;
     width: 130px;
     text-align: center;
 }
