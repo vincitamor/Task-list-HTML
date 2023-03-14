@@ -1,0 +1,70 @@
+
+form{
+    width: 70%;
+    height: 500px;
+    margin: 70px auto;
+    padding: 100px;
+    box-sizing: border-box; 
+    position: relative;
+    color: lightcyan;
+    background-color: rgb(26, 28, 26);
+}
+
+h1{
+    text-align: left;
+    font-size: 40px;
+}
+
+form input#userTaskInput{
+    box-sizing: border-box;
+    width: 90%;
+    height: 30px;
+    padding-left: 25px;
+    border-style: ridge;
+}
+
+body{
+    background-color: rgb(31, 17, 17);
+}
+
+input{
+    height: 30px;
+    width: 20%;
+    background-color:rgb(46, 44, 44);
+    color: white;
+    border-style: ridge;
+}
+#add-task:hover{
+    background-color: white;
+}
+
+#add-task {
+height: 30px;
+color: red;
+background-color: rgb(64, 59, 70);
+}
+
+ul {
+    list-style: none;
+    list-style-position: outside;
+    margin: 0;
+    padding: 25px 0;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.delete-item:hover{
+    background-color: white;
+    width: 150px;
+}
+
+.delete-item{
+    background-color: rgb(64, 59, 70);
+    border-radius: 10px;
+    border:none;
+    color: red;
+    width: 130px;
+    text-align: center;
+}
